@@ -159,3 +159,27 @@ On Debian based machines try running:
 
 	sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev
 
+## contrib
+
+Contributed packages to the original MEDOC package 
+
+### basic package
+
+#### setup
+
+- pip install pyenv
+- pyenv 
+
+#### execution
+
+- update the configuration file
+  - src/test/p3mResource
+    - /Users/dsm/DGit/MEDOC/contrib/basic/src/test/p3mResource/configuration1b.cfg
+- run the unit test
+  - src/test/p3m
+    - medoc1b.py : 
+- misc
+  - medoc9x.py : a sample unit test and logging in python
+  - 
+
+#### 

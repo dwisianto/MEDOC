@@ -12,7 +12,7 @@ import configparser
 
 
 logging.basicConfig(level=logging.DEBUG)
-sys.path.append('/Users/dsm/DGit/d.bee.whcs/b9/y9/rnk18a/rk8.ex.medoc1a/src/main/p3/medoc/lib')
+sys.path.append('/Users/dsm/DGit/MEDOC/contrib/basic/src/main/p3m/lib')
 import MEDOC
 import getters
 
@@ -22,7 +22,7 @@ import getters
 ##
 class medoc1(unittest.TestCase):
 
-    cfg_file='../p3resource/configuration1b.cfg'
+    cfg_file='../p3mResource/configuration1b.cfg'
     file_downloaded_custom = 'pubmed18n0001.xml.gz'
     insert_limit=3
 
@@ -232,14 +232,14 @@ class medoc1(unittest.TestCase):
 
 def suite_a():
     suite = unittest.TestSuite()
-    #suite.addTest(medoc1('m101a_cfg'))
+    suite.addTest(medoc1('m101a_cfg'))
     #suite.addTest(medoc1('m102a_init'))
     #suite.addTest(medoc1('m102a_init_drop'))    
     #suite.addTest(medoc1('m103a_in_name'))
     #suite.addTest(medoc1('m104a_download'))
     #suite.addTest(medoc1('m105a_extract'))
     #suite.addTest(medoc1('m106a_parse'))
-    suite.addTest(medoc1('m107a_insert'))
+    #suite.addTest(medoc1('m107a_insert'))
     #suite.addTest(medoc1('m108a_getters'))
     #suite.addTest(medoc1('m109a'))
     return suite
