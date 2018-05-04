@@ -165,10 +165,31 @@ Contributed packages to the original MEDOC package
 
 ### basic package
 
-#### setup
+#### setup 
 
-- pip install pyenv
-- pyenv 
+- install mysql in macos
+  - brew install mysql
+  - mysql -u root -p
+  - SHOW DATABASES 
+- install pyenv in macos 
+  - brew update
+  - brew install pyenv
+  - brew install pyenv-virtualenv
+  -  CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 3.6.4 
+  -  pyenv install 2.7.10
+  - pyenv versions 
+- Then, when you need a certain version:
+  - pyenv local 3.5.0
+- Update bash_profile
+  - if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+  - if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+  - export PYENV_ROOT="$HOME/.pyenv"
+  - export PATH="$PYENV_ROOT/bin:$PATH"
+  - eval "$(pyenv init -)"
+
+#### setup pyenv
+
+
 
 #### execution
 

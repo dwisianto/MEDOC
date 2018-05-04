@@ -53,13 +53,13 @@ class medoc1(unittest.TestCase):
         myMedoc = MEDOC.MEDOC(self.cfg_file)
 
         # StepA : Create database if not exist
-        myMedoc.create_pubmedDB()
-        #myMedoc.drop_pubmedDB()             
+        # myMedoc.create_pubmedDB()
+        myMedoc.drop_pubmedDB()             
     
     def m102a_init_drop(self):
         ''' create a database in mysql
         in : configuration.cfg
-        out : none
+        out : create and delete database in mysql
         '''
         logging.debug('m102a_init' )
         logging.debug(sys.path)
@@ -72,7 +72,7 @@ class medoc1(unittest.TestCase):
 
     def m103a_in_name(self):
         ''' 
-        i: 
+        i: self.cfg_file
         o: gz_file_list
         '''
         myMedoc = MEDOC.MEDOC(self.cfg_file)
@@ -232,10 +232,10 @@ class medoc1(unittest.TestCase):
 
 def suite_a():
     suite = unittest.TestSuite()
-    suite.addTest(medoc1('m101a_cfg'))
-    #suite.addTest(medoc1('m102a_init'))
+    #suite.addTest(medoc1('m101a_cfg'))
+    suite.addTest(medoc1('m102a_init'))
     #suite.addTest(medoc1('m102a_init_drop'))    
-    #suite.addTest(medoc1('m103a_in_name'))
+    suite.addTest(medoc1('m103a_in_name'))
     #suite.addTest(medoc1('m104a_download'))
     #suite.addTest(medoc1('m105a_extract'))
     #suite.addTest(medoc1('m106a_parse'))
